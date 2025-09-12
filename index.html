@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matías Gutiérrez - Economist</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background-color: #f8f9fa;
+      border-bottom: 1px solid #ddd;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      color: #000;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #0056b3;
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-left: 20px;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+    }
+
+    /* Section */
+    section {
+      padding: 40px 60px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #0056b3;
+      margin-top: 40px;
+    }
+
+    /* CV Button */
+    .cv-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #0056b3;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .cv-button:hover {
+      background-color: #003d80;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div>
+      <h1>Matías Gutiérrez</h1>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#teaching">Teaching</a>
+        <a href="cv.pdf" target="_blank">CV</a>
+      </nav>
+    </div>
+    <div class="header-right">
+      <img src="foto.jpg" alt="Profile Picture" class="profile-pic">
+    </div>
+  </header>
+
+  <!-- Sections -->
+  <section id="about">
+    <h2>About</h2>
+    <p>Economist at the Central Bank of Chile, interested in applied econometrics, firm dynamics, and financial economics. Currently applying for PhD programs in economics.</p>
+  </section>
+
+  <section id="research">
+    <h2>Research</h2>
+    <ul>
+      <li><strong>Paper 1:</strong> Inflation Targeting in Financially Stable Economies (with Cowan & García Silva)</li>
+      <li><strong>Book Chapter:</strong> Towards Efficient Taxation of Minerals (with Fuentes & Piedrabuena)</li>
+    </ul>
+  </section>
+
+  <section id="teaching">
+    <h2>Teaching</h2>
+    <p>Teaching Assistant experience in Econometrics, Macroeconomics, and Public Finance.</p>
+  </section>
+
+  <!-- CV Download -->
+  <section>
+    <a href="cv.pdf" class="cv-button" target="_blank">Download CV</a>
+  </section>
+
+</body>
+</html>
+
