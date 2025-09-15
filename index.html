@@ -18,9 +18,11 @@
     header {
       display: flex;
       align-items: center;
-      padding: 20px 60px;
-      background-color: #f8f9fa;
-      border-bottom: 1px solid #ddd;
+      padding: 40px 60px;
+      background-image: url('fondo.jpg'); /* Reemplaza con tu imagen */
+      background-size: cover;
+      background-position: center;
+      color: white;
     }
 
     .header-left {
@@ -32,6 +34,7 @@
       height: 160px;
       border-radius: 50%;
       object-fit: cover;
+      border: 3px solid white;
     }
 
     .header-right {
@@ -42,8 +45,8 @@
 
     header h1 {
       margin: 0;
-      font-size: 2rem;
-      color: #000;
+      font-size: 2.2rem;
+      text-transform: uppercase;
     }
 
     nav {
@@ -53,12 +56,13 @@
     nav a {
       margin-right: 15px;
       text-decoration: none;
-      color: #000;
+      color: white;
       font-weight: bold;
+      text-transform: uppercase;
     }
 
     nav a:hover {
-      color: #0056b3;
+      color: #ffd700;
     }
 
     section {
@@ -70,6 +74,11 @@
     h2 {
       color: #0056b3;
       margin-top: 40px;
+      text-transform: uppercase;
+    }
+
+    ul {
+      padding-left: 20px;
     }
 
     .cv-button {
@@ -86,6 +95,16 @@
     .cv-button:hover {
       background-color: #003d80;
     }
+
+    #references ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    #references li {
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
   </style>
 </head>
 <body>
@@ -101,6 +120,7 @@
         <a href="#about">About</a>
         <a href="#research">Research</a>
         <a href="#teaching">Teaching</a>
+        <a href="#references">References</a>
         <a href="CV.pdf" target="_blank">CV</a>
       </nav>
     </div>
@@ -108,12 +128,12 @@
 
   <!-- Sections -->
   <section id="about">
-    <h2>About</h2>
+    <h2>📘 ABOUT</h2>
     <p>Matías Gutiérrez Quintana is an economist at the Central Bank of Chile, interested in applied econometrics, firm dynamics, and financial economics. Currently applying for PhD programs in economics.</p>
   </section>
 
   <section id="research">
-    <h2>Research</h2>
+    <h2>📊 RESEARCH</h2>
     <ul>
       <li><strong>Paper 1:</strong> Inflation Targeting in Financially Stable Economies (with Cowan & García Silva)</li>
       <li><strong>Book Chapter:</strong> Towards Efficient Taxation of Minerals (with Fuentes & Piedrabuena)</li>
@@ -121,16 +141,40 @@
   </section>
 
   <section id="teaching">
-    <h2>Teaching</h2>
+    <h2>🎓 TEACHING</h2>
     <p>Teaching Assistant experience in Econometrics, Macroeconomics, and Public Finance.</p>
+    <a href="CV.pdf" class="cv-button" target="_blank">Download CV</a>
   </section>
-  
-  <!-- CV Download -->
-  <section> 
-    <a href="CV.pdf" class="cv-button" target="_blank">Download CV</a> 
+
+  <section id="references">
+    <h2>📨 REFERENCES</h2>
+    <ul>
+      <li>
+        <strong>Rodrigo Palma-Behnke</strong><br>
+        Full Professor – Department of Electrical Engineering<br>
+        University of Chile<br>
+        <a href="mailto:rodrigo.palma@uchile.cl">rodrigo.palma@uchile.cl</a>
+      </li>
+      <li>
+        <strong>Mauricio Calani</strong><br>
+        Head of Macroeconomical Modeling Department<br>
+        Central Bank of Chile<br>
+        <a href="mailto:mcalani@bcentral.cl">mcalani@bcentral.cl</a>
+      </li>
+      <li>
+        <strong>Juan Pablo Medina</strong><br>
+        Associate Professor – Business School<br>
+        Universidad Adolfo Ibáñez<br>
+        <a href="mailto:juan.medina@uai.cl">juan.medina@uai.cl</a>
+      </li>
+      <li>
+        <strong>Damián Romero</strong><br>
+        Senior Economist – Macroeconomical Modeling Department<br>
+        Central Bank of Chile<br>
+        <a href="mailto:dromero@bcentral.cl">dromero@bcentral.cl</a>
+      </li>
+    </ul>
   </section>
 
 </body>
 </html>
-
-
