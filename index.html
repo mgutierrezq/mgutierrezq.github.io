@@ -19,48 +19,42 @@
 
     header {
       display: flex;
-      justify-content: space-between;
+      flex-wrap: wrap;
       align-items: center;
-      padding: 40px 60px;
+      justify-content: center;
+      padding: 40px 20px;
       background-image: url('fondo.jpg'); /* Reemplaza con tu imagen */
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       color: white;
-    }
-
-    .header-left {
-      display: flex;
-      align-items: center;
+      min-height: 300px;
+      text-align: center;
     }
 
     .profile-pic {
-      width: 160px;
-      height: 160px;
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
       object-fit: cover;
       border: 3px solid white;
-      margin-right: 30px;
-    }
-
-    .header-right {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
+      margin-bottom: 15px;
     }
 
     header h1 {
-      margin: 0;
-      font-size: 2.2rem;
+      width: 100%;
+      font-size: 2rem;
+      margin: 10px 0;
       text-transform: uppercase;
     }
 
     nav {
+      width: 100%;
       margin-top: 10px;
     }
 
     nav a {
-      margin-right: 15px;
+      margin: 0 10px;
       text-decoration: none;
       color: white;
       font-weight: bold;
@@ -72,19 +66,41 @@
     }
 
     section {
-      padding: 40px 60px;
+      padding: 40px 20px;
       max-width: 900px;
       margin: auto;
     }
 
     h2 {
       color: #0056b3;
-      margin-top: 40px;
       text-transform: uppercase;
+      margin-bottom: 20px;
     }
 
-    ul {
-      padding-left: 20px;
+    h3 {
+      color: #333;
+      margin-top: 30px;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
+    }
+
+    .paper-title {
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    .authors {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .abstract {
+      font-style: italic;
+      color: #555;
+      margin-bottom: 20px;
     }
 
     .cv-button {
@@ -111,61 +127,21 @@
       margin-bottom: 25px;
       line-height: 1.6;
     }
-
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        text-align: center;
-        padding: 30px 20px;
-      }
-
-      .header-left {
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 20px;
-      }
-
-      .profile-pic {
-        margin-right: 0;
-        margin-bottom: 15px;
-      }
-
-      .header-right {
-        align-items: center;
-      }
-
-      header h1 {
-        font-size: 1.8rem;
-      }
-
-      nav {
-        margin-top: 10px;
-      }
-
-      nav a {
-        display: inline-block;
-        margin: 5px 10px;
-      }
-    }
   </style>
 </head>
 <body>
 
   <!-- Header -->
   <header>
-    <div class="header-left">
-      <img src="foto.JPG" alt="Profile Picture" class="profile-pic" />
-      <h1>Matías Gutiérrez Quintana</h1>
-    </div>
-    <div class="header-right">
-      <nav>
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#teaching">Teaching</a>
-        <a href="#references">References</a>
-        <a href="CV.pdf" target="_blank">CV</a>
-      </nav>
-    </div>
+    <img src="foto.JPG" alt="Profile Picture" class="profile-pic" />
+    <h1>Matías Gutiérrez Quintana</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#references">References</a>
+      <a href="CV.pdf" target="_blank">CV</a>
+    </nav>
   </header>
 
   <!-- About -->
@@ -177,16 +153,28 @@
   <!-- Research -->
   <section id="research">
     <h2>📊 RESEARCH</h2>
-    <ul>
-      <li><strong>Work from Home, Internal Migration and Gender Wage Gap in Latin America</strong><br>
-      Jeanne Lafortune, Matías Gutiérrez, Hugo Silva</li>
 
-      <li><strong>Ownership and Control Networks in Chile</strong><br>
-      Felipe Avilés, Conrado Canales, Francisco Henríquez, David Kohn, Dagoberto Quevedo, Patricio Toro, Matías Gutiérrez</li>
+    <h3>Working Papers</h3>
 
-      <li><strong>Checkout Behavior: Labor Market Shocks and Spending Patterns in Chile</strong><br>
-      Enzo Cerletti, David Kohn, Rodrigo Heresi, Matías Gutiérrez</li>
-    </ul>
+    <div class="paper">
+      <div class="paper-title">Work from Home, Internal Migration and Gender Wage Gap in Latin America</div>
+      <div class="authors">Jeanne Lafortune, Matías Gutiérrez, Hugo Silva</div>
+      <div class="abstract">[Abstract coming soon]</div>
+    </div>
+
+    <div class="paper">
+      <div class="paper-title">Ownership and Control Networks in Chile</div>
+      <div class="authors">Felipe Avilés, Conrado Canales, Francisco Henríquez, David Kohn, Dagoberto Quevedo, Patricio Toro, Matías Gutiérrez</div>
+      <div class="abstract">[Abstract coming soon]</div>
+    </div>
+
+    <h3>Work in Progress</h3>
+
+    <div class="paper">
+      <div class="paper-title">Checkout Behavior: Labor Market Shocks and Spending Patterns in Chile</div>
+      <div class="authors">Enzo Cerletti, David Kohn, Rodrigo Heresi, Matías Gutiérrez</div>
+      <div class="abstract">[Abstract coming soon]</div>
+    </div>
   </section>
 
   <!-- Teaching -->
