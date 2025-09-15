@@ -21,37 +21,46 @@
     }
 
     header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
       display: flex;
       align-items: center;
-      padding: 40px 60px;
+      justify-content: space-between;
+      padding: 20px 60px;
       background-image: url('fondo.png');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       color: white;
+      height: 160px;
     }
 
     .header-left {
-      margin-right: 30px;
+      display: flex;
+      align-items: center;
     }
 
     .profile-pic {
-      width: 160px;
-      height: 160px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
       object-fit: cover;
       border: 3px solid white;
+      margin-right: 20px;
     }
 
     .header-right {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      align-items: flex-end;
     }
 
     header h1 {
       margin: 0;
-      font-size: 2.2rem;
+      font-size: 1.8rem;
       text-transform: uppercase;
     }
 
@@ -60,7 +69,7 @@
     }
 
     nav a {
-      margin-right: 15px;
+      margin-left: 15px;
       text-decoration: none;
       color: white;
       font-weight: bold;
@@ -69,6 +78,10 @@
 
     nav a:hover {
       color: #ffd700;
+    }
+
+    main {
+      padding-top: 180px;
     }
 
     section {
@@ -137,25 +150,34 @@
     @media (max-width: 768px) {
       header {
         flex-direction: column;
-        align-items: flex-start;
-        padding: 30px 20px;
+        align-items: center;
+        height: auto;
+        padding: 20px;
+        text-align: center;
       }
 
       .header-left {
-        margin-bottom: 20px;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      .profile-pic {
+        margin-right: 0;
+        margin-bottom: 10px;
       }
 
       .header-right {
-        align-items: flex-start;
-      }
-
-      header h1 {
-        font-size: 1.8rem;
+        align-items: center;
       }
 
       nav a {
         display: inline-block;
-        margin: 5px 10px 0 0;
+        margin: 5px 10px;
+      }
+
+      main {
+        padding-top: 220px;
       }
     }
   </style>
@@ -166,9 +188,9 @@
   <header>
     <div class="header-left">
       <img src="foto.JPG" alt="Profile Picture" class="profile-pic" />
+      <h1>Matías Gutiérrez Quintana</h1>
     </div>
     <div class="header-right">
-      <h1>Matías Gutiérrez Quintana</h1>
       <nav>
         <a href="#about">About</a>
         <a href="#research">Research</a>
@@ -179,89 +201,104 @@
     </div>
   </header>
 
-  <!-- About -->
-  <section id="about">
-    <h2>📘 ABOUT</h2>
-    <p>I'm an economist at the Central Bank of Chile, passionate about applied econometrics, labor markets, and firm dynamics. I earned my Master's in Economics from the Pontificia Universidad Católica de Chile, and I've had the privilege of collaborating with leading academics in Chile and the U.S. I'm currently preparing my applications for PhD programs in economics, aiming to deepen my research and contribute to the field.</p>
-  </section>
+  <main>
+    <!-- About -->
+    <section id="about">
+      <h2>📘 ABOUT</h2>
+      <p>I'm an economist at the Central Bank of Chile, passionate about applied econometrics, labor markets, and firm dynamics. I earned my Master's in Economics from the Pontificia Universidad Católica de Chile, and I've had the privilege of collaborating with leading academics in Chile and the U.S. I'm currently preparing my applications for PhD programs in economics, aiming to deepen my research and contribute to the field.</p>
+    </section>
 
-  <!-- Research -->
-  <section id="research">
-    <h2>📊 RESEARCH</h2>
+    <!-- Research -->
+    <section id="research">
+      <h2>📊 RESEARCH</h2>
 
-    <h3>Working Papers</h3>
+      <h3>Working Papers</h3>
 
-    <div class="paper">
-      <div class="paper-title">Work from Home, Internal Migration and Gender Wage Gap in Latin America</div>
-       <div class="abstract">This paper examines the effects of teleworking on internal migration within Latin America, 
-         utilizing household survey data from Chile, Peru, Mexico, Colombia, and Brazil. Employing a differences-in-differences 
-         approach, we compare outcomes for occupations more susceptible to telework before, during, and after the pandemic. Workers 
-         in teleworkable occupations were more likely to live in less urban areas during the pandemic, although the effects are small 
-         and often statistically insignificant. This contrasts with findings from other developing regions and appears partly due to a 
-         lack of telework feasibility in rural areas. We also find evidence of increased wages for teleworkable occupations, suggesting 
-         that remote work complemented office-based work. Finally, we uncover notable gender differences: teleworking appears to contribute 
-         to a reduction in the gender wage gap, with larger income gains or smaller declines for women compared to men, likely reflecting 
-         the higher cost of urban living for women.</div>
-       <div class="authors">with Jeanne Lafortune and Hugo Silva</div>
-    </div>
+      <div class="paper">
+        <div class="paper-title">Work from Home, Internal Migration and Gender Wage Gap in Latin America</div>
+        <div class="authors">Jeanne Lafortune, Matías Gutiérrez, Hugo Silva</div>
+        <div class="abstract">This paper examines the effects of teleworking on internal migration and gender wage gaps in Latin America, using household survey data from Chile, Peru, Mexico, Colombia, and Brazil. We compare outcomes before and after the pandemic and find that teleworking is more common among urban residents and may reduce gender wage gaps and migration pressures.</div>
+      </div>
 
-  <!-- Teaching -->
- <section id="teaching">
-  <h2>🎓 TEACHING</h2>
-  <p>I've worked as a teaching assistant in undergraduate and graduate courses across three major Chilean universities. I enjoy helping students grasp complex ideas and building strong foundations in economics. My experience includes:</p>
+      <div class="paper">
+        <div class="paper-title">Ownership and Control Networks in Chile</div>
+        <div class="authors">Felipe Avilés, Conrado Canales, Francisco Henríquez, David Kohn, Dagoberto Quevedo, Patricio Toro, Matías Gutiérrez</div>
+        <div class="abstract">[Abstract coming soon]</div>
+      </div>
 
-  <h3>Universidad de Santiago de Chile</h3>
-  <ul>
-    <li>Microeconomics I</li>
-    <li>Microeconomics II</li>
-    <li>Microeconomics III</li>
-    <li>Econometrics I</li>
-    <li>Econometrics II</li>
-    <li>Econometric Theory</li>
-    <li>Industrial Organization</li>
-  </ul>
+      <h3>Work in Progress</h3>
 
-  <h3>Universidad de Chile</h3>
-  <ul>
-    <li>Microeconomics I</li>
-    <li>Microeconomics II</li>
-  </ul>
+      <div class="paper">
+        <div class="paper-title">Checkout Behavior: Labor Market Shocks and Spending Patterns in Chile</div>
+        <div class="authors">Enzo Cerletti, David Kohn, Rodrigo Heresi, Matías Gutiérrez</div>
+        <div class="abstract">[Abstract coming soon]</div>
+      </div>
+    </section>
 
-  <h3>Pontificia Universidad Católica de Chile</h3>
-  <ul>
-    <li>Microeconomics II</li>
-    <li>Microeconomic Theory</li>
-  </ul>
+    <!-- Teaching -->
+    <section id="teaching">
+      <h2>🎓 TEACHING</h2>
+      <p>I've worked as a teaching assistant in undergraduate and graduate courses across three major Chilean universities. I enjoy helping students grasp complex ideas and build strong foundations in economics. My experience includes:</p>
 
-</section>
+      <h3>Universidad de Santiago de Chile</h3>
+      <ul>
+        <li>Microeconomics I</li>
+        <li>Microeconomics II</li>
+        <li>Microeconomics III</li>
+        <li>Econometrics I</li>
+        <li>Econometrics II</li>
+        <li>Econometric Theory</li>
+        <li>Industrial Organization</li>
+        <li>Introduction to Administration</li>
+      </ul>
 
-  <!-- References -->
-  <section id="references">
-    <h2>📨 REFERENCES</h2>
-    <ul>
-      <li><strong>Patricio Domínguez</strong><br>
-      Assistant Professor, Pontificia Universidad Católica de Chile<br>
-      Ph.D., University of California, Berkeley<br>
-      <a href="mailto:pdomingr@ing.puc.cl">pdomingr@ing.puc.cl</a></li>
+      <h3>Universidad de Chile</h3>
+      <ul>
+        <li>Microeconomics I</li>
+        <li>Microeconomics II</li>
+      </ul>
 
-      <li><strong>Damian Clarke</strong><br>
-      Associate Professor, Universidad de Chile<br>
-      Ph.D., University of Oxford<br>
-      <a href="mailto:dclarke@fen.uchile.cl">dclarke@fen.uchile.cl</a></li>
+      <h3>Pontificia Universidad Católica de Chile</h3>
+      <ul>
+        <li>Microeconomics II</li>
+      </ul>
+    </section>
 
-      <li><strong>Jeanne Lafortune</strong><br>
-      Full Professor, Pontificia Universidad Católica de Chile<br>
-      Ph.D., Massachusetts Institute of Technology (MIT)<br>
-      <a href="mailto:jlafortune@uc.cl">jlafortune@uc.cl</a></li>
-    </ul>
-  </section>
+    <!-- References -->
+    <section id="references">
+      <h2>📨 REFERENCES</h2>
+      <ul>
+        <li>
+          <strong>Patricio Domínguez</strong><br />
+          Assistant Professor, Pontificia Universidad Católica de Chile<br />
+          Ph.D., University of California, Berkeley<br />
+          <a href="mailto:pdomingr@ing.puc.cl">pdomingr@ing.puc.cl</a>
+        </li>
 
-      <!-- CV Download -->
+        <li>
+          <strong>Damian Clarke</strong><br />
+          Associate Professor, Universidad de Chile<br />
+          Ph.D., University of Oxford<br />
+          <a href="mailto:dclarke@fen.uchile.cl">dclarke@fen.uchile.cl</a>
+        </li>
+
+        <li>
+          <strong>Jeanne Lafortune</strong><br />
+          Full Professor, Pontificia Universidad Católica de Chile<br />
+          Ph.D., Massachusetts Institute of Technology (MIT)<br />
+          <a href="mailto:jlafortune@uc.cl">jlafortune@uc.cl</a>
+        </li>
+      </ul>
+    </section>
+    
+  <!-- CV Download -->
   <section>
     <a href="CV.pdf" class="cv-button" target="_blank">Download CV</a>
   </section>
-
+    
+  </main>
 </body>
 </html>
+      
 
 
