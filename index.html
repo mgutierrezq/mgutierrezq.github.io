@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Matías Gutiérrez Quintana – Economist, Central Bank of Chile</title>
-  <meta name="description" content="Personal website of Matías Gutiérrez Quintana, economist at the Central Bank of Chile. Research in applied econometrics, firm dynamics, and financial economics.">
-  <meta name="keywords" content="Matías Gutiérrez Quintana, economist, Chile, Central Bank, PhD economics, econometrics, firm dynamics">
-  <meta name="author" content="Matías Gutiérrez Quintana">
+  <meta name="description" content="Personal website of Matías Gutiérrez Quintana, economist at the Central Bank of Chile. Research in applied econometrics, firm dynamics, and financial economics." />
+  <meta name="keywords" content="Matías Gutiérrez Quintana, economist, Chile, Central Bank, PhD economics, econometrics, firm dynamics" />
+  <meta name="author" content="Matías Gutiérrez Quintana" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://mgutierrezq.github.io/" />
   <style>
     body {
       margin: 0;
@@ -19,10 +21,15 @@
       display: flex;
       align-items: center;
       padding: 40px 60px;
-      background-image: url('fondo.png'); /* Reemplaza con tu imagen */
+      background-image: url('fondo.jpg'); /* Reemplaza con tu imagen */
       background-size: cover;
       background-position: center;
+      background-repeat: no-repeat;
       color: white;
+      flex-wrap: wrap;
+      text-align: center;
+      justify-content: center;
+      min-height: 100vh;
     }
 
     .header-left {
@@ -35,18 +42,28 @@
       border-radius: 50%;
       object-fit: cover;
       border: 3px solid white;
+      margin-bottom: 20px;
     }
 
     .header-right {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: center;
     }
 
     header h1 {
       margin: 0;
       font-size: 2.2rem;
       text-transform: uppercase;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 2rem;
+      cursor: pointer;
+      color: white;
+      margin-top: 10px;
     }
 
     nav {
@@ -105,6 +122,42 @@
       margin-bottom: 25px;
       line-height: 1.6;
     }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      nav#main-nav {
+        display: none;
+        flex-direction: column;
+        background-color: #0056b3;
+        padding: 10px;
+        margin-top: 10px;
+      }
+
+      nav#main-nav a {
+        color: white;
+        padding: 10px 0;
+        border-bottom: 1px solid #fff;
+      }
+
+      nav#main-nav.show {
+        display: flex;
+      }
+
+      .header-left,
+      .header-right {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      header h1 {
+        font-size: 1.8rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -112,11 +165,12 @@
   <!-- Header -->
   <header>
     <div class="header-left">
-      <img src="foto.JPG" alt="Profile Picture" class="profile-pic">
+      <img src="foto.JPG" alt="Profile Picture" class="profile-pic" />
     </div>
     <div class="header-right">
       <h1>Matías Gutiérrez Quintana</h1>
-      <nav>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <nav id="main-nav">
         <a href="#about">About</a>
         <a href="#research">Research</a>
         <a href="#teaching">Teaching</a>
@@ -143,39 +197,52 @@
   <section id="teaching">
     <h2>🎓 TEACHING</h2>
     <p>Teaching Assistant experience in Econometrics, Macroeconomics, and Public Finance.</p>
-    <a href="CV.pdf" class="cv-button" target="_blank">Download CV</a>
   </section>
 
   <section id="references">
     <h2>📨 REFERENCES</h2>
     <ul>
       <li>
-        <strong>Rodrigo Palma-Behnke</strong><br>
-        Full Professor – Department of Electrical Engineering<br>
-        University of Chile<br>
+        <strong>Rodrigo Palma-Behnke</strong><br />
+        Full Professor – Department of Electrical Engineering<br />
+        University of Chile<br />
         <a href="mailto:rodrigo.palma@uchile.cl">rodrigo.palma@uchile.cl</a>
       </li>
       <li>
-        <strong>Mauricio Calani</strong><br>
-        Head of Macroeconomical Modeling Department<br>
-        Central Bank of Chile<br>
+        <strong>Mauricio Calani</strong><br />
+        Head of Macroeconomical Modeling Department<br />
+        Central Bank of Chile<br />
         <a href="mailto:mcalani@bcentral.cl">mcalani@bcentral.cl</a>
       </li>
       <li>
-        <strong>Juan Pablo Medina</strong><br>
-        Associate Professor – Business School<br>
-        Universidad Adolfo Ibáñez<br>
+        <strong>Juan Pablo Medina</strong><br />
+        Associate Professor – Business School<br />
+        Universidad Adolfo Ibáñez<br />
         <a href="mailto:juan.medina@uai.cl">juan.medina@uai.cl</a>
       </li>
       <li>
-        <strong>Damián Romero</strong><br>
-        Senior Economist – Macroeconomical Modeling Department<br>
-        Central Bank of Chile<br>
+        <strong>Damián Romero</strong><br />
+        Senior Economist – Macroeconomical Modeling Department<br />
+        Central Bank of Chile<br />
         <a href="mailto:dromero@bcentral.cl">dromero@bcentral.cl</a>
       </li>
     </ul>
   </section>
+  
+ <!-- CV Download -->
+  <section>
+    <a href="CV.pdf" class="cv-button" target="_blank">Download CV</a>
+  </section>
+
+  
+
+  <!-- Script for menu toggle -->
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("main-nav");
+      nav.classList.toggle("show");
+    }
+  </script>
 
 </body>
 </html>
-
