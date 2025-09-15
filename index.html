@@ -55,14 +55,6 @@
       text-transform: uppercase;
     }
 
-    .menu-toggle {
-      display: none;
-      font-size: 2rem;
-      cursor: pointer;
-      color: white;
-      margin-top: 10px;
-    }
-
     nav {
       margin-top: 10px;
     }
@@ -146,30 +138,13 @@
         font-size: 1.8rem;
       }
 
-      .menu-toggle {
-        display: block;
-      }
-
-      nav#main-nav {
-        display: none;
-        flex-direction: column;
-        background-color: #0056b3;
-        padding: 10px;
+      nav {
         margin-top: 10px;
       }
 
-      nav#main-nav a {
-        color: white;
-        padding: 10px 0;
-        border-bottom: 1px solid #fff;
-      }
-
-      nav#main-nav.show {
-        display: flex;
-      }
-
-      nav {
-        display: none;
+      nav a {
+        display: inline-block;
+        margin: 5px 10px;
       }
     }
   </style>
@@ -183,8 +158,7 @@
       <h1>Matías Gutiérrez Quintana</h1>
     </div>
     <div class="header-right">
-      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-      <nav id="main-nav">
+      <nav>
         <a href="#about">About</a>
         <a href="#research">Research</a>
         <a href="#teaching">Teaching</a>
@@ -244,13 +218,7 @@
     </ul>
   </section>
 
-  <!-- Script for menu toggle -->
-  <script>
-    function toggleMenu() {
-      const nav = document.getElementById("main-nav");
-      nav.classList.toggle("show");
-    }
-  </script>
-
 </body>
 </html>
+
+
